@@ -3,8 +3,10 @@
 ***
 ## __[GitHub]__
 >[Repositorio en GitHub](https://github.com/Re-21-12/Tercer-Proyecto_Editor-de-Texto)
+[![imagen_screen](WhatsApp%20Image%202022-10-17%20at%2010.44.03%20PM.jpeg)](https://github.com/Re-21-12/Tercer-Proyecto_Editor-de-Texto "captura_de_git")
 ## ___Video___
->
+>[Video en YouTube](https://www.youtube.com/watch?v=sdogOLSP0M0&t=8s&ab_channel=VictorMacario)
+[![imagen_screen](WhatsApp%20Image%202022-10-17%20at%2010.42.02%20PM.jpeg)](https://www.youtube.com/watch?v=sdogOLSP0M0&t=8s&ab_channel=VictorMacario "captura_de_Video")
 # ___Documentacion Externa___
 ## ___Editor de texto en Python___
 ## Librerias
@@ -304,7 +306,6 @@ import webbrowser
 
 # ///////////////RUTA//////////////
 ruta = ''
-
 #-_-_-_-_-_-_-_-_-_-_-_-_-_CONFIGS_-_-_-_-_-_-_-
 
 # Creamos una raiz
@@ -368,7 +369,7 @@ def abrir():
             texto.insert('insert', contenido)  # aniade un item a la lista
             raiz.title(ruta + "Editando un texto")
 
-
+#-_-_-_-_-_-_-_-_FUNCIONES DE GUARDADO-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 def guardar():
     info.set('Guardar Archivo')
    # global ruta  # para que se pueda acceder
@@ -411,7 +412,7 @@ def informacion():
         
 def manual_de_usuario():
     info.set('Abriendo documentacion')
-    webbrowser.open('https://github.com/Re-21-12')
+    webbrowser.open('https://github.com/Re-21-12/Tercer-Proyecto_Editor-de-Texto')
 
 def integrantes():
     mb.showinfo('Integrantes', 'Nombre: Victor Alfredo Macario Enriquez.\nNo Carne:7690-22-5042.\nSeccion:A.\nUniversidad: Universidad Mariano Galvez.\nSede:Boca del Monte.')
@@ -428,7 +429,7 @@ _File_menu.add_command(label="Nuevo", command=nuevo)
 _File_menu.add_command(label="Abrir", command=abrir)
 _File_menu.add_separator()
 # Guardados
-_File_menu.add_command(label="Guardar", command=abrir)
+_File_menu.add_command(label="Guardar", command=guardar)
 _File_menu.add_command(label="Guardar Como", command=guardar_como)
 _File_menu.add_separator()
 # Salida
@@ -450,17 +451,6 @@ _File_menu_help.add_command(label="Informacion(!)", command=informacion)
 _File_menu_help.add_command(label="Manual de usuario", command=manual_de_usuario)#agregar link
 _File_menu_help.add_command(label="Integrantes", command=integrantes)
 _Menu.add_cascade(label="Ayuda", menu=_File_menu_help)
-# -_-_-_-_-_-_-_-_-_--_--_--_-FRAME-_-_-_-_-_--_--_-
-frame = Frame(raiz)
-#empaquetamos el frame en nuestra raiz
-frame.pack(fill='both', expand=1)
-# fondo
-frame.config(bg='#ffbcda')
-# bold o negrita del marco
-frame.config(bd=15)
-frame.config(cursor='tcross')
-# marco
-frame.config(relief="groove")
 # -_-_-_-_-_-_-_-_raiz loop-_-_-_-_-_-_-_-_-_-_
 raiz.config(menu=_Menu)
 raiz.mainloop()

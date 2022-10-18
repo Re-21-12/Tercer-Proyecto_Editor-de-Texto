@@ -17,7 +17,6 @@ import webbrowser
 
 # ///////////////RUTA//////////////
 ruta = ''
-
 #-_-_-_-_-_-_-_-_-_-_-_-_-_CONFIGS_-_-_-_-_-_-_-
 
 # Creamos una raiz
@@ -141,7 +140,7 @@ _File_menu.add_command(label="Nuevo", command=nuevo)
 _File_menu.add_command(label="Abrir", command=abrir)
 _File_menu.add_separator()
 # Guardados
-_File_menu.add_command(label="Guardar", command=abrir)
+_File_menu.add_command(label="Guardar", command=guardar)
 _File_menu.add_command(label="Guardar Como", command=guardar_como)
 _File_menu.add_separator()
 # Salida
@@ -163,17 +162,6 @@ _File_menu_help.add_command(label="Informacion(!)", command=informacion)
 _File_menu_help.add_command(label="Manual de usuario", command=manual_de_usuario)#agregar link
 _File_menu_help.add_command(label="Integrantes", command=integrantes)
 _Menu.add_cascade(label="Ayuda", menu=_File_menu_help)
-# -_-_-_-_-_-_-_-_-_--_--_--_-FRAME-_-_-_-_-_--_--_-
-frame = Frame(raiz)
-#empaquetamos el frame en nuestra raiz
-frame.pack(fill='both', expand=1)
-# fondo
-frame.config(bg='#ffbcda')
-# bold o negrita del marco
-frame.config(bd=15)
-frame.config(cursor='tcross')
-# marco
-frame.config(relief="groove")
 # -_-_-_-_-_-_-_-_raiz loop-_-_-_-_-_-_-_-_-_-_
 raiz.config(menu=_Menu)
 raiz.mainloop()
